@@ -12,8 +12,6 @@ class CreaturesController < ApplicationController
     end
   end
 
-
-
   def new
     @creature = Creature.new
     render :new
@@ -21,8 +19,14 @@ class CreaturesController < ApplicationController
 
   def show
     creature_id = params[:id]
-    @creature = Creature.find_by(creature_id)
+    @creature = Creature.find_by_id(creature_id)
     render :show
+  end
+
+  def edit
+    creature_id = params[:id]
+    @creature = Creature.find_by_id(creature_id)
+    render :show    
   end
 
 end
