@@ -1,8 +1,5 @@
-<%= form_for :creature, url: "/creatures", method: "post" do |freak| %>
-
-
-
-    <%= freak.text_field :name %>
-    <%= freak.text_area :description %>
-    <%= freak.submit "Save Creature" %>
-  <% end %>
+<%= form_for @creature do |f| %>
+<%= f.text_field :name %>
+<%= f.text_area :description %>
+<%= f.submit "Save Creature" %>
+<% end %>
