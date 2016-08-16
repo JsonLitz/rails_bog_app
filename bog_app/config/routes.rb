@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "creatures#index"
   get "/creatures", to: "creatures#index", as: "creatures"
-  post "/creatures/new", tp: "creatures#new"
+  get "/creatures/new", to: "creatures#new"
+  post "/creatures", to: "creatures#create"
 end
